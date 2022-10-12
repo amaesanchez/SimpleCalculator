@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Muloka Kerash', sans-serif;
+    src: url(MulokaKerash-BWg4x.otf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*, *::before, *::after {
+    box-sizing:border-box;
+    font-family: 'Muloka Kerash', sans-serif;
+    font-weight: normal;
+    color: rgb(78, 65, 48);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    border: 3px outset rgb(99, 84, 64);
+    background: linear-gradient(to bottom, #F7DFBA, #9DB567);
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .50);
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(160, 197, 134, 0.9)
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.purr {
+    border-radius: 0px 0px 0px 15px;
+}
+
+.equals {
+    grid-column: span 2;
+    border-radius: 0px 0px 15px 0px;
+}
+
+.output {
+    border-radius: 15px 15px 0px 0px;
+    grid-column: 1 / -1;
+    background-color: rgba(48, 30, 21, 0.9);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+
+}
+
+.output .previous-operand {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
